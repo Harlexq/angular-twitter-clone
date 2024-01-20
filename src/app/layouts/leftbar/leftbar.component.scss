@@ -1,0 +1,45 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 26%;
+  text-align: end;
+  justify-content: end;
+  display: flex;
+  .header-inner {
+    .head-brand {
+      display: block;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: 0.3s;
+      &:hover {
+        background-color: rgba(239, 243, 244, 0.1);
+      }
+      .logo {
+        color: #fff;
+        fill: #fff;
+      }
+    }
+    .nav {
+      .nav-item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        font-size: 20px;
+        padding: 12px;
+        border-radius: 999px;
+        &:hover {
+          background-color: rgba(231, 233, 234, 0.1);
+        }
+        &.active {
+          font-weight: 600;
+        }
+        svg {
+          width: 25px;
+          color: #fff;
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
