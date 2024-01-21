@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
+import { HomeComponent } from './layout/home/home.component';
 
 const title = '/ X';
 
@@ -8,34 +8,37 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./pages/pages.component').then((c) => c.PagesComponent),
+      import('./layout/layout.component').then((c) => c.LayoutComponent),
     title: `Anasayfa ${title}`,
     children: [
       {
         path: 'home',
         loadComponent: () =>
-          import('./pages/home/home.component').then((c) => c.HomeComponent),
+          import('./layout/home/home.component').then((c) => c.HomeComponent),
       },
       {
         path: 'explore',
         loadComponent: () =>
-          import('./pages/explore/explore.component').then(
+          import('./layout/explore/explore.component').then(
             (c) => c.ExploreComponent
           ),
-      },
-      {
-        path: 'messages',
-        loadComponent: () =>
-          import('./pages/messages/messages.component').then(
-            (c) => c.MessagesComponent
-          ),
+        title: `Keşfet ${title}`,
       },
       {
         path: 'notifications',
         loadComponent: () =>
-          import('./pages/notifications/notifications.component').then(
+          import('./layout/notifications/notifications.component').then(
             (c) => c.NotificationsComponent
           ),
+        title: `Bildirimler ${title}`,
+      },
+      {
+        path: 'messages',
+        loadComponent: () =>
+          import('./layout/messages/messages.component').then(
+            (c) => c.MessagesComponent
+          ),
+        title: `Mesajlar ${title}`,
       },
     ],
   },

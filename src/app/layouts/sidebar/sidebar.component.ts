@@ -1,15 +1,16 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
+import { SidebarItemsComponent } from '../sidebar-items/sidebar-items.component';
 
 @Component({
-  selector: 'app-leftbar',
+  selector: 'app-sidebar',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive, NgIf],
-  templateUrl: './leftbar.component.html',
-  styleUrl: './leftbar.component.scss',
+  imports: [RouterLink, RouterLinkActive, NgIf, SidebarItemsComponent],
+  templateUrl: './sidebar.component.html',
+  styleUrl: './sidebar.component.scss',
 })
-export class LeftbarComponent {
+export class SidebarComponent {
   constructor(private router: Router) {}
 
   isRouteActive(route: string): boolean {

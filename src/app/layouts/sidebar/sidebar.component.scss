@@ -1,10 +1,4 @@
 .header {
-  position: fixed;
-  top: 0;
-  width: 26%;
-  text-align: end;
-  justify-content: end;
-  display: flex;
   .header-inner {
     .head-brand {
       display: block;
@@ -29,7 +23,7 @@
         padding: 12px;
         border-radius: 999px;
         &:hover {
-          background-color: rgba(231, 233, 234, 0.1);
+          background-color: #e7e9ea1a;
         }
         &.active {
           font-weight: 600;
