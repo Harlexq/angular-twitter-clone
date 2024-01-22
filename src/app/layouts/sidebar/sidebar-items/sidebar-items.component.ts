@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import { SidebarItems } from '../../models/SidebarItems';
+import { SidebarItems } from '../../../models/SidebarItems';
 import { NgFor, NgIf } from '@angular/common';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'sidebar-items',
   standalone: true,
-  imports: [NgFor, RouterLink, NgIf],
+  imports: [NgFor, RouterLink, NgIf, RouterLinkActive],
   templateUrl: './sidebar-items.component.html',
   styleUrl: './sidebar-items.component.scss',
 })

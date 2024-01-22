@@ -7,11 +7,13 @@
     ></path>
   </svg>
 </div>
-@for (sidebarItem of sidebarItems; track $index) {
+
 <nav class="nav">
+  @for (sidebarItem of sidebarItems; track $index) {
   <a
     [routerLink]="sidebarItem.route"
-    class="inline-flex items-center gap-5 p-[12px] rounded-full hover:bg-[#e7e9ea1a]"
+    routerLinkActive="active"
+    class="sidebar-item inline-flex items-center gap-5 p-[12px] rounded-full hover:bg-[#e7e9ea1a]"
   >
     @if (isRouteActive(sidebarItem.route)) {
     <svg
@@ -28,5 +30,5 @@
     }
     <p class="text-xl me-4">{{ sidebarItem.label }}</p>
   </a>
+  }
 </nav>
-}
