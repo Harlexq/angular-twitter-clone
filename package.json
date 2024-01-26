@@ -6,7 +6,7 @@
     "start": "ng serve --o --port 3500",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "json": "json-server --watch api/db.json"
+    "json": "json-server --port 2500 --watch api/db.json"
   },
   "private": true,
   "dependencies": {
