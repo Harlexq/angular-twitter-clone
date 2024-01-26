@@ -3,6 +3,8 @@ import { Component } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SidebarItemsComponent } from './sidebar-items/sidebar-items.component';
 import { AccountMenuComponent } from './account-menu/account-menu.component';
+import { MainBtnComponent } from '../../shared/main-btn/main-btn.component';
+import { LogoComponent } from './logo/logo.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,6 +15,8 @@ import { AccountMenuComponent } from './account-menu/account-menu.component';
     NgIf,
     SidebarItemsComponent,
     AccountMenuComponent,
+    MainBtnComponent,
+    LogoComponent,
   ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss',
