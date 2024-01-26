@@ -1,7 +1,7 @@
-<div
-  class="mt-6 hidden lg:block px-4 py-4 rounded-full bg-sky-500 hover:bg-opacity-90 cursor-pointer transition"
+<button
+  class="bg-[#1d9bf0] rounded-full flex items-center justify-center font-bold hover:bg-[#1a8cd8] transition-colors"
+  [ngClass]="size === 'normal' ? 'px-4 h-9' : ''"
+  [ngClass]="size === 'large' ? 'px-4 text-[17px] h-[52px] w-full' : ''"
 >
-  <p class="text-white text-center font-semibold text-[15px]">
-    <ng-content></ng-content>
-  </p>
-</div>
+  <ng-content></ng-content>
+</button>

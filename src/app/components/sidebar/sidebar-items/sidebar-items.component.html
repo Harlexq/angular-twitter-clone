@@ -1,28 +1,37 @@
 <nav class="mt-0.5 mb-1">
   @for (sidebarItem of sidebarItems; track $index) {
   <a
-    [routerLink]="sidebarItem.route"
+    [routerLink]="sidebarItem.path"
     routerLinkActive="active"
-    class="sidebar-item py-1 block group"
+    class="sidebar-item py-[3px] block group"
   >
     <div
       class="p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]"
     >
-      @if (isRouteActive(sidebarItem.route)) {
-      <svg
-        viewBox="0 0 24 24"
-        class="fill-[#e7e9ea] block w-[26.25px] h-[26.25px]"
-        [innerHTML]="sanitizeIcon(sidebarItem.activeIcon)"
-      ></svg>
-      } @else {
-      <svg
-        viewBox="0 0 24 24"
-        class="fill-[#e7e9ea] block w-[26.25px] h-[26.25px]"
-        [innerHTML]="sanitizeIcon(sidebarItem.icon)"
-      ></svg>
-      }
-      <p class="text-xl">{{ sidebarItem.label }}</p>
+      <div class="w-[26.25px] h-[26.25px] relative">
+        @if (sidebarItem.notification) {
+        <span
+          class="w-[18px] h-[18px] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[11px]"
+          >{{ sidebarItem?.notification }}</span
+        >
+        } @if (isRouteActive(sidebarItem.path)) {
+        <svg
+          viewBox="0 0 24 24"
+          class="fill-[#e7e9ea] w-[26.25px] h-[26.25px]"
+          [innerHTML]="sanitizeIcon(sidebarItem.activeIcon)"
+        ></svg>
+        } @else {
+        <svg
+          viewBox="0 0 24 24"
+          class="fill-[#e7e9ea] w-[26.25px] h-[26.25px]"
+          [innerHTML]="sanitizeIcon(sidebarItem.icon)"
+        ></svg>
+        }
+      </div>
+      <p class="pr-4 text-xl">{{ sidebarItem.title }}</p>
     </div>
   </a>
   }
+  <sidebar-items-more />
+  <sidebar-items-new />
 </nav>

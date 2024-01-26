@@ -9,8 +9,7 @@
 }
 
 body {
-  background-color: #000000;
-  color: #fff;
+  @apply bg-black text-white text-[15px];
   font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Helvetica, Arial, sans-serif;
 }
@@ -23,3 +22,6 @@ a {
 ul li {
   list-style-type: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
