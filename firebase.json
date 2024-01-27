@@ -1,6 +1,9 @@
 {
-  "hosting": {
-    "public": "dist",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-  }
+  "hosting": [
+    {
+      "target": "twitter-clone",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
 }

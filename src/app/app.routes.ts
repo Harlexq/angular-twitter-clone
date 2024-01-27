@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { HomeComponent } from './layout/home/home.component';
 
 const title = '/ X';
 
@@ -39,6 +38,14 @@ export const routes: Routes = [
             (c) => c.MessagesComponent
           ),
         title: `Mesajlar ${title}`,
+      },
+      {
+        path: '**',
+        loadComponent: () =>
+          import('./layout/not-found/not-found.component').then(
+            (c) => c.NotFoundComponent
+          ),
+        title: `Sayfa Bulunamadı ${title}`,
       },
     ],
   },

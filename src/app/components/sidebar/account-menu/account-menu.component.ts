@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 })
 export class AccountMenuComponent {
   isDropdownVisible = false;
+
   dropdown() {
     this.isDropdownVisible = !this.isDropdownVisible;
   }

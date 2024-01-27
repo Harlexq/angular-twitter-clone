@@ -1,5 +1,14 @@
 {
+  "targets": {
+    "angular-twitter-clone-1ac2d": {
+      "hosting": {
+        "twitter-clone": [
+          "angular-twitter-clone-1ac2d"
+        ]
+      }
+    }
+  },
   "projects": {
-    "default": "angular-twitter-clone-harlex"
+    "default": "angular-twitter-clone-1ac2d"
   }
 }
