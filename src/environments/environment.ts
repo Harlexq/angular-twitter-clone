@@ -1,6 +1,6 @@
 export const environment = {
   api: 'http://localhost:2500/',
-  firebase: {
+  firebaseConfig: {
     apiKey: 'AIzaSyDfFBxGY7JxwilpafCXTgAhe1e2C6iI-VA',
     authDomain: 'angular-twitter-clone-1ac2d.firebaseapp.com',
     projectId: 'angular-twitter-clone-1ac2d',

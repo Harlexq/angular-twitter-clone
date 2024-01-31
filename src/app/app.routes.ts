@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { LoginComponent } from './layout/login/login.component';
 
 const title = '/ X';
 
@@ -48,5 +49,11 @@ export const routes: Routes = [
         title: `Sayfa Bulunamadı ${title}`,
       },
     ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    title: `Giriş Yap ${title}`,
+    outlet: 'aux',
   },
 ];
