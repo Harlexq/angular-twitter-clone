@@ -6,10 +6,12 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root',
 })
-export class BaseService {
+export class BaseService extends ErrorsService {
   apiUrl: string = environment.api;
 
-  constructor(private http: HttpClient, private errorsService: ErrorsService) {}
+  constructor(private http: HttpClient) {
+    super();
+  }
 
   ngOnInit() {}
 
@@ -19,7 +21,7 @@ export class BaseService {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
-        this.errorsService.errorHandler(err);
+        this.errorHandler(err);
       },
     });
   }
@@ -30,7 +32,7 @@ export class BaseService {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
-        this.errorsService.errorHandler(err);
+        this.errorHandler(err);
       },
     });
   }
@@ -41,7 +43,7 @@ export class BaseService {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
-        this.errorsService.errorHandler(err);
+        this.errorHandler(err);
       },
     });
   }
@@ -52,7 +54,7 @@ export class BaseService {
         callBack(res);
       },
       error: (err: HttpErrorResponse) => {
-        this.errorsService.errorHandler(err);
+        this.errorHandler(err);
       },
     });
   }

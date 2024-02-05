@@ -1,5 +1,5 @@
 <div class="relative" (click)="menu()">
-  <button class="py-[3px] block group">
+  <button class="py-[3px] w-full text-left group">
     <div
       class="p-3 rounded-full transition-colors inline-flex items-center gap-5 group-hover:bg-[#eff3f41a]"
     >
@@ -14,7 +14,7 @@
     </div>
   </button>
 
-  @if (menuOpen === true) {
+  @if (menuOpen) {
   <nav
     class="w-[318px] absolute bottom-0 left-0 bg-black shadow-box rounded-xl overflow-hidden"
   >

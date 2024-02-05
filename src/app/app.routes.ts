@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './layout/login/login.component';
+import { LoginComponent } from './pages/login/login.component';
+import { VerifiedChooseComponent } from './pages/verified-choose/verified-choose.component';
 
 const title = '/ X';
 
@@ -14,12 +15,12 @@ export const routes: Routes = [
       {
         path: 'home',
         loadComponent: () =>
-          import('./layout/home/home.component').then((c) => c.HomeComponent),
+          import('./pages/home/home.component').then((c) => c.HomeComponent),
       },
       {
         path: 'explore',
         loadComponent: () =>
-          import('./layout/explore/explore.component').then(
+          import('./pages/explore/explore.component').then(
             (c) => c.ExploreComponent
           ),
         title: `Keşfet ${title}`,
@@ -27,7 +28,7 @@ export const routes: Routes = [
       {
         path: 'notifications',
         loadComponent: () =>
-          import('./layout/notifications/notifications.component').then(
+          import('./pages/notifications/notifications.component').then(
             (c) => c.NotificationsComponent
           ),
         title: `Bildirimler ${title}`,
@@ -35,15 +36,45 @@ export const routes: Routes = [
       {
         path: 'messages',
         loadComponent: () =>
-          import('./layout/messages/messages.component').then(
+          import('./pages/messages/messages.component').then(
             (c) => c.MessagesComponent
           ),
         title: `Mesajlar ${title}`,
       },
       {
+        path: 'harlexq/lists',
+        loadComponent: () =>
+          import('./pages/lists/lists.component').then((c) => c.ListsComponent),
+        title: `Listeler ${title}`,
+      },
+      {
+        path: 'i/bookmarks',
+        loadComponent: () =>
+          import('./pages/bookmarks/bookmarks.component').then(
+            (c) => c.BookmarksComponent
+          ),
+        title: `Yer İşaretleri ${title}`,
+      },
+      {
+        path: 'harlexq/communities',
+        loadComponent: () =>
+          import('./pages/communities/communities.component').then(
+            (c) => c.CommunitiesComponent
+          ),
+        title: `Topluluklar ${title}`,
+      },
+      {
+        path: 'harlexq',
+        loadComponent: () =>
+          import('./pages/profile/profile.component').then(
+            (c) => c.ProfileComponent
+          ),
+        title: `Harlex ${title}`,
+      },
+      {
         path: '**',
         loadComponent: () =>
-          import('./layout/not-found/not-found.component').then(
+          import('./pages/not-found/not-found.component').then(
             (c) => c.NotFoundComponent
           ),
         title: `Sayfa Bulunamadı ${title}`,
@@ -53,7 +84,11 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent,
-    title: `Giriş Yap ${title}`,
     outlet: 'aux',
+  },
+  {
+    path: 'i/verified-choose',
+    component: VerifiedChooseComponent,
+    outlet: 'verified-choose',
   },
 ];
