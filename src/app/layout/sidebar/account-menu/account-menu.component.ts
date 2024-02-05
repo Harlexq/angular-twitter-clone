@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { LoginComponent } from '../../../pages/login/login.component';
@@ -29,5 +29,13 @@ export class AccountMenuComponent {
       width: '400px',
     });
     this.router.navigate([{ outlets: { aux: 'login' } }]);
+  }
+
+  @HostListener('document:click', ['$event'])
+  handleDocumentClick(event: MouseEvent) {
+    if (!this.elRef.nativeElement.contains(event.target)) {
+      this.router.navigate([{ outlets: { aux: null } }]);
+      this.isDropdownVisible = false;
+    }
   }
 }

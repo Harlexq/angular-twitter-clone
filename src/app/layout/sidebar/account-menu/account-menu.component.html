@@ -1,44 +1,39 @@
 <div class="relative">
-  <div
+  <button
     (click)="dropdown()"
-    class="mb-3 flex items-center justify-between rounded-full hover:bg-[#e7e9ea1a] cursor-pointer p-3 select-none"
+    class="my-3 p-3 rounded-full hover:bg-[#eff3f41a] w-full flex text-left items-center cursor-pointer select-none"
   >
-    <div class="flex gap-3">
-      <img src="assets/imgs/profile.jpg" alt="Profile" class="rounded-full" />
-      <div class="">
-        <h2 class="text-[#e7e9ea] text-[15px] font-bold">Harlex</h2>
-        <p class="text-[#71767b] text-[15px]">{{ "@" }}harlexq</p>
-      </div>
+    <img
+      src="assets/imgs/profile.jpg"
+      alt="Profile"
+      class="w-10 h-10 rounded-full"
+    />
+    <div class="mx-3 text-[15px]">
+      <h6 class="font-bold leading-[20px]">Harlex</h6>
+      <div class="text-[#71767b]">{{ "@" }}harlexq</div>
     </div>
-    <div class="menu-icon">
-      <svg viewBox="0 0 24 24" class="fill-white w-5">
-        <path
-          d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
-        ></path>
-      </svg>
-    </div>
-  </div>
+    <svg viewBox="0 0 24 24" class="fill-[#e7e9ea] w-[18.75px] ml-auto">
+      <path
+        d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"
+      ></path>
+    </svg>
+  </button>
 
   @if (isDropdownVisible) {
-  <div class="dropdown-menu">
-    <div class="absolute rounded-2xl py-3 bg-black drop overflow-hidden w-80">
-      <a
-        (click)="openLoginModal()"
-        class="font-bold dropdown-item py-[12px] px-[16px] hover:bg-[#16181c] cursor-pointer"
-        >Var olan bir hesap ekle</a
-      >
-      <a
-        routerLink="logout"
-        class="font-bold dropdown-item py-[12px] px-[16px] hover:bg-[#16181c]"
-        >{{ "@" }}harlexq hesabından çıkış yap</a
-      >
-    </div>
-
-    <div class="absolute ss">
-      <svg viewBox="0 0 24 24" class="w-3">
-        <path d="M22 17H2L12 6l10 11z"></path>
-      </svg>
-    </div>
+  <div
+    class="absolute bottom-[80px] -translate-y-2 py-3 w-[300px] z-[1] left-1/2 -translate-x-1/2 bg-[#000000] shadow-box rounded-2xl"
+  >
+    <button
+      (click)="openLoginModal()"
+      class="py-3 px-4 text-left transition-colors hover:bg-[#16181c] w-full font-bold leading-[1.25rem]"
+    >
+      Var olan bir hesap ekle
+    </button>
+    <a
+      routerLink="logout"
+      class="block py-3 px-4 text-left transition-colors hover:bg-[#16181c] w-full font-bold leading-[1.25rem]"
+      >{{ "@" }}harlexq hesabından çıkış yap</a
+    >
   </div>
   }
 </div>
