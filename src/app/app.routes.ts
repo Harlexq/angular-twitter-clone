@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
-import { LoginComponent } from './pages/login/login.component';
-import { VerifiedChooseComponent } from './pages/verified-choose/verified-choose.component';
+import { LoginComponent } from './dialogs/login/login.component';
+import { VerifiedChooseComponent } from './dialogs/verified-choose/verified-choose.component';
+import { DisplayComponent } from './dialogs/display/display.component';
 
 const title = '/ X';
 
@@ -72,6 +73,22 @@ export const routes: Routes = [
         title: `Harlex ${title}`,
       },
       {
+        path: 'i/trends',
+        loadComponent: () =>
+          import('./pages/trends/trends.component').then(
+            (c) => c.TrendsComponent
+          ),
+        title: `Gündemler ${title}`,
+      },
+      {
+        path: 'i/connect-people',
+        loadComponent: () =>
+          import('./pages/connect-people/connect-people.component').then(
+            (c) => c.ConnectPeopleComponent
+          ),
+        title: `Bağlan ${title}`,
+      },
+      {
         path: '**',
         loadComponent: () =>
           import('./pages/not-found/not-found.component').then(
@@ -90,5 +107,10 @@ export const routes: Routes = [
     path: 'i/verified-choose',
     component: VerifiedChooseComponent,
     outlet: 'verified-choose',
+  },
+  {
+    path: 'display',
+    component: DisplayComponent,
+    outlet: 'view',
   },
 ];

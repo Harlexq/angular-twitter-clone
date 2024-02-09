@@ -1,0 +1,13 @@
+<div [formGroup]="form" class="relative">
+  <input
+    class="rounded-md pt-5 pb-3 px-2 w-full bg-black border-[2px] border-[#333639] focus:border-[#1d9bf0] outline-none"
+    [type]="type"
+    [id]="id"
+    [formControl]="fc"
+  />
+  <label
+    [for]="id"
+    class="absolute top-3 -left-1 px-4 text-[#3f4346] text-[14px]"
+    >{{ labelName }}</label
+  >
+</div>

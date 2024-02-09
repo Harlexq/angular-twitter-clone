@@ -1,0 +1,10 @@
+label {
+  transition: 0.3s;
+}
+
+input:focus + label {
+  top: 0;
+  left: 0;
+  color: #1d9bf0;
+  padding: 2px 0 0 8px;
+}

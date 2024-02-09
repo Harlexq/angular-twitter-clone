@@ -1,7 +1,14 @@
 <button
-  class="bg-[#1d9bf0] rounded-full flex items-center justify-center font-bold hover:bg-[#1a8cd8] transition-colors"
-  [ngClass]="size === 'normal' ? 'px-4 h-9' : ''"
-  [ngClass]="size === 'large' ? 'px-4 text-[17px] h-[52px] w-full' : ''"
+  class="px-4 rounded-full flex items-center justify-center font-bold transition-colors"
+  [ngClass]="{
+    'h-9': size === 'normal',
+    'h-8 text-sm': size === 'small',
+    'text-[17px] h-[52px] w-full': size === 'large',
+    'bg-[#1d9bf0] hover:bg-[#1a8cd8] text-white': variant === 'primary',
+    'bg-white text-black hover:bg-[#d7dbdc]': variant === 'white',
+    'border border-[#b4b4b4] hover:border-[#67070f] hover:bg-[#f4212e1a] hover:text-[#f4212e]':
+      variant === 'white-outlet'
+  }"
 >
   <ng-content></ng-content>
 </button>

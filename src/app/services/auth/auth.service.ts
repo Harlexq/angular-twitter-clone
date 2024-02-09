@@ -10,7 +10,7 @@ export class AuthService {
 
   login(email: string, password: string) {
     this.fireAuth.signInWithEmailAndPassword(email, password).then(
-      () => {
+      (res) => {
         localStorage.setItem('token', 'true');
         this.router.navigateByUrl('/home');
       },
@@ -23,7 +23,7 @@ export class AuthService {
 
   signup(email: string, password: string) {
     this.fireAuth.createUserWithEmailAndPassword(email, password).then(
-      () => {
+      (res) => {
         alert('Kayıt Başarılı');
         this.router.navigateByUrl('/login');
       },

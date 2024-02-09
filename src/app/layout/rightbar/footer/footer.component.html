@@ -1,0 +1,10 @@
+<footer class="mb-4 px-4 flex flex-wrap gap-2">
+  @for (item of footerItems; track $index) {
+  <a
+    [routerLink]="item?.path"
+    class="text-[#71767b] leading-4 text-[13px] hover:underline"
+  >
+    {{ item.title }}
+  </a>
+  }
+</footer>

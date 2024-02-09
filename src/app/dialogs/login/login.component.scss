@@ -1,0 +1,41 @@
+::ng-deep {
+  .mat-mdc-dialog-surface.mdc-dialog__surface {
+    background-color: #000;
+    border-radius: 16px;
+  }
+
+  .backdrop {
+    background: rgba(91, 112, 131, 0.4);
+  }
+
+  .container {
+    width: 365px;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .text-lead {
+    position: relative;
+  }
+
+  .text-lead::before {
+    content: "";
+    background-color: #333639;
+    height: 1px;
+    width: 42%;
+    position: absolute;
+    top: 12px;
+    left: 0;
+  }
+
+  .text-lead::after {
+    content: "";
+    background-color: #333639;
+    height: 1px;
+    width: 42%;
+    position: absolute;
+    top: 12px;
+    right: 0;
+  }
+}

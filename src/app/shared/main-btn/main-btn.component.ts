@@ -9,5 +9,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './main-btn.component.scss',
 })
 export class MainBtnComponent {
-  @Input({ required: true }) size?: 'normal' | 'large' = 'normal';
+  @Input() size?: 'normal' | 'large' | 'small' = 'normal';
+  @Input() variant?: 'primary' | 'white' | 'white-outlet' = 'primary';
 }

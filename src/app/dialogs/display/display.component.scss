@@ -1,0 +1,10 @@
+::ng-deep {
+  .backdrop {
+    background: rgba(91, 112, 131, 0.4);
+  }
+
+  .mat-mdc-dialog-surface.mdc-dialog__surface {
+    background-color: #000;
+    border-radius: 16px;
+  }
+}

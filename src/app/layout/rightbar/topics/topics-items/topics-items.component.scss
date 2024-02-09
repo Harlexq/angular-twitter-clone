@@ -1,0 +1,32 @@
+::ng-deep {
+  .mat-mdc-menu-panel {
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 15px,
+      rgba(255, 255, 255, 0.15) 0px 0px 3px 1px !important;
+    position: absolute;
+    top: -25px;
+    right: 325px;
+    border-radius: 12px !important;
+    background-color: rgba(255, 255, 255, 0.03);
+    max-width: 384px !important;
+    .mat-mdc-menu-content {
+      background-color: #000;
+      padding: 0;
+      width: 384px;
+      .mat-mdc-menu-item {
+        color: #fff;
+        padding: 12px 16px;
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.03);
+        }
+        .mat-mdc-menu-item-text {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          color: #e7e9ea;
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

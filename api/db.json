@@ -1,4 +1,68 @@
 {
-  "postst": [{ "id": 1 }],
-  "users": [{ "id": 1 }]
+  "users": [
+    {
+      "id": 1,
+      "username": "harlexq",
+      "fullName": "Harlex",
+      "avatar": "https://pbs.twimg.com/profile_images/1656360577319542784/jIf5BPxr.jpg",
+      "banner": "https://pbs.twimg.com/profile_banners/1413976171444846600/1681380614",
+      "biography": "Junior Front-End Developor",
+      "website": "https://serhanbakir.com.tr",
+      "verifeted": true,
+      "security": {
+        "token": "asvas8v4asv4sv48498sa4vas5va4s5",
+        "email": "serhanbakir5@gmail.com",
+        "password": "123456789"
+      },
+      "phone": "+90 552 782 27 01",
+      "follower": 32,
+      "followed": 198,
+      "dateBirth": "30 Eylül 1981",
+      "accountCreationDate": "04 09 2020",
+      "posts": [
+        {
+          "id": 1,
+          "description": "Film sitesi tasarımı yaparken küçük bir ekran görüntüsü yorumları bekliyorum",
+          "images": [
+            {
+              "id": 1,
+              "image": "https://pbs.twimg.com/media/F2CICsrWcAMtjzh?format=jpg",
+              "date": "27 Tem 2023"
+            }
+          ],
+          "interactions": [
+            {
+              "reply": 38,
+              "resend": 123,
+              "like": 10000,
+              "views": 100000,
+              "save": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "description": "Film sitesi tasarımı yaparken küçük bir ekran görüntüsü yorumları bekliyorum",
+      "images": [
+        {
+          "id": 1,
+          "image": "https://pbs.twimg.com/media/F2CICsrWcAMtjzh?format=jpg",
+          "date": "27 Tem 2023"
+        }
+      ],
+      "interactions": [
+        {
+          "reply": 38,
+          "resend": 123,
+          "like": 10000,
+          "views": 100000,
+          "save": true
+        }
+      ]
+    }
+  ]
 }
