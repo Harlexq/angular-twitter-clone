@@ -66,6 +66,7 @@ export class MoreComponent {
       width: '600px',
       height: '650px',
       backdropClass: 'backdrop',
+      disableClose: true,
     });
     this.router.navigate([{ outlets: { view: 'display' } }]);
   }

@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DisplayService } from '../../../services/display/display.service';
 
 @Component({
   selector: 'app-search',
@@ -12,6 +13,8 @@ import { FormsModule } from '@angular/forms';
 export class SearchComponent {
   query: string = '';
   setFocus: boolean = false;
+
+  constructor(public displayService: DisplayService) {}
 
   clearQuery() {
     this.query = '';

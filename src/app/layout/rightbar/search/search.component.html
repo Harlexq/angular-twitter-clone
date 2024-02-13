@@ -30,7 +30,8 @@
     <button
       type="button"
       (click)="clearQuery()"
-      class="w-[22px] h-[22px] rounded-full bg-[#1d9bf0] flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 invisible group-focus-within:visible"
+      [style.background-color]="displayService.selectedColor"
+      class="w-[22px] h-[22px] rounded-full flex items-center justify-center text-black min-w-[22px] absolute top-1/2 -translate-y-1/2 right-3 invisible group-focus-within:visible"
     >
       <svg viewBox="0 0 15 15" class="w-[10px] h-[10px] fill-current">
         <path

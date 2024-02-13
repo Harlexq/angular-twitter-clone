@@ -1,11 +1,9 @@
 <h3 class="mt-8 mb-3 text-[23px] leading-7 font-extrabold text-center">
   Görünümünü özelleştir
 </h3>
-<div class="p-8 pt-0">
-  <p class="text-center text-[#71767b] leading-5 text-[15px] mb-5">
-    Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
-  </p>
-</div>
+<p class="text-center text-[#71767b] leading-5 text-[15px] mb-5">
+  Bu ayarlar, bu tarayıcıdaki tüm X hesaplarını etkiler.
+</p>
 <div class="mx-8 px-8 mb-4">
   <div class="border border-[#2f3336] px-4 flex py-3 gap-3 rounded-2xl">
     <img
@@ -39,5 +37,92 @@
         gibi bahsetmeler içerebilir.
       </div>
     </div>
+  </div>
+</div>
+
+<div class="grid gap-2 px-8">
+  <section>
+    <h6 class="text-[#71767b] mb-1 leading-5 text-[13px] font-bold">
+      Yazı tipi boyutu
+    </h6>
+    <div class="bg-[#16181c] p-4 rounded-2xl flex items-center gap-5">
+      <div class="text-[0.813rem]">Aa</div>
+      <div class="h-1 bg-[#8ecdf8] flex-1 rounded-full relative">
+        <div
+          class="flex justify-between absolute w-[calc(100%+16px)] -top-3.5 -left-[8px]"
+        >
+          <button
+            type="button"
+            class="before:absolute before:inset-0 before:rounded-full before:hover:bg-[#1d9bf0] before:opacity-10 w-8 h-8 rounded-full flex items-center justify-center relative"
+          >
+            <div
+              class="w-3 h-3 rounded-full"
+              [style.background-color]="displayService.selectedColor"
+            ></div>
+          </button>
+        </div>
+      </div>
+      <div class="text-[1.25rem]">Aa</div>
+    </div>
+  </section>
+
+  <section>
+    <h6 class="text-[#71767b] mb-1 leading-5 text-[13px] font-bold">Renk</h6>
+    <div class="bg-[#16181c] py-2 rounded-2xl flex justify-around items-center">
+      @for (color of colors; track $index) {
+      <button
+        (click)="selectColor(color)"
+        [style.background-color]="color"
+        class="w-[40px] h-[40px] rounded-full flex items-center justify-center text-white"
+      >
+        <svg viewBox="0 0 24 24" class="w-[25px]">
+          @if (displayService.selectedColor === color) {
+          <path
+            fill="currentColor"
+            d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+          />
+          }
+        </svg>
+      </button>
+      }
+    </div>
+  </section>
+
+  <section>
+    <h6 class="text-[#71767b] mb-1 leading-5 text-[13px] font-bold">
+      Arka plan
+    </h6>
+    <div class="py-2 px-4 mb-3 grid gap-2 grid-cols-3 bg-[#16181c] rounded-2xl">
+      @for (color of backgroundcolors; track $index) {
+      <button
+        (click)="backSelectColor(color.hexCode)"
+        [style.background-color]="color.hexCode"
+        [style.color]="color.textCode"
+        class="h-[62px] pr-3 pl-2 border font-bold border-white/10 rounded group flex items-center gap-1.5"
+      >
+        <div
+          class="w-[40px] h-[40px] rounded-full flex-shrink-0 group-hover:bg-black/5 flex items-center justify-center"
+        >
+          <div
+            class="w-[20px] h-[20px] bg-[#1d9bf0] rounded-full flex items-center justify-center"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="fill-[#fff] w-[18.75px] h-[18.75px]"
+            >
+              <path
+                d="M9.64 18.952l-5.55-4.861 1.317-1.504 3.951 3.459 8.459-10.948L19.4 6.32 9.64 18.952z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div class="truncate">{{ color.title }}</div>
+      </button>
+      }
+    </div>
+  </section>
+
+  <div class="flex items-center justify-center mt-4">
+    <main-btn (click)="close()">Bitti</main-btn>
   </div>
 </div>

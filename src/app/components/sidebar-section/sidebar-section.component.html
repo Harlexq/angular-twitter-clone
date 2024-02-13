@@ -10,7 +10,8 @@
   @if (more) {
   <a
     [routerLink]="more"
-    class="h-[52px] flex items-center px-4 text-[15px] text-[#1d9bf0] transition-colors hover:bg-white/[0.03]"
+    [style.color]="displayService.selectedColor"
+    class="h-[52px] flex items-center px-4 text-[15px] transition-colors hover:bg-white/[0.03]"
   >
     Daha fazla göster
   </a>

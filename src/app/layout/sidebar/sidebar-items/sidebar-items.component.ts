@@ -5,6 +5,7 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MoreComponent } from './more/more.component';
 import { NewComponent } from './new/new.component';
+import { DisplayService } from '../../../services/display/display.service';
 
 @Component({
   selector: 'sidebar-items',
@@ -21,7 +22,11 @@ import { NewComponent } from './new/new.component';
   styleUrl: './sidebar-items.component.scss',
 })
 export class SidebarItemsComponent {
-  constructor(private sanitizer: DomSanitizer, private router: Router) {}
+  constructor(
+    private sanitizer: DomSanitizer,
+    private router: Router,
+    public displayService: DisplayService
+  ) {}
 
   sanitizeIcon(icon: any) {
     return this.sanitizer.bypassSecurityTrustHtml(icon);

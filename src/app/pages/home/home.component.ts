@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
+import { StickyHeaderComponent } from '../../components/sticky-header/sticky-header.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [StickyHeaderComponent],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
-export class HomeComponent {
-
-}
+export class HomeComponent {}

@@ -11,7 +11,8 @@
       <div class="w-[1.641rem] h-[1.641rem] relative">
         @if (sidebarItem.notification) {
         <span
-          class="w-[1.125rem] h-[1.125rem] rounded-full bg-[#1d9bf0] absolute -top-1.5 -right-1 flex items-center justify-center text-[0.688rem]"
+          [style.background-color]="displayService.selectedColor"
+          class="w-[1.125rem] h-[1.125rem] rounded-full absolute -top-1.5 -right-1 flex items-center justify-center text-[0.688rem]"
           >{{ sidebarItem?.notification }}</span
         >
         } @if (isRouteActive(sidebarItem.path)) {

@@ -1,5 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { DisplayService } from '../../services/display/display.service';
 
 @Component({
   selector: 'main-btn',
@@ -11,4 +12,6 @@ import { Component, Input } from '@angular/core';
 export class MainBtnComponent {
   @Input() size?: 'normal' | 'large' | 'small' = 'normal';
   @Input() variant?: 'primary' | 'white' | 'white-outlet' = 'primary';
+
+  constructor(public displayService: DisplayService) {}
 }
